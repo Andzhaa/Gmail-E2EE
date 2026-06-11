@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { width: 300px; padding: 15px; font-family: sans-serif; }
+        .hidden { display: none; }
+        input, button { width: 100%; margin-bottom: 10px; padding: 8px; box-sizing: border-box; }
+        button { background-color: #1a73e8; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #1557b0; }
+    </style>
+</head>
+<body>
+    <h2>Gmail E2EE</h2>
+    
+    <div id="unlock-section">
+        <h3>Unlock Session</h3>
+        <input type="password" id="unlock-passphrase" placeholder="Passphrase">
+        <button id="btn-unlock">Unlock</button>
+        <p id="unlock-status"></p>
+    </div>
+
+    <hr>
+
+    <div id="generate-section">
+        <h3>Generate New Keys</h3>
+        <input type="text" id="gen-name" placeholder="Full Name">
+        <input type="email" id="gen-email" placeholder="Email Address">
+        <input type="password" id="gen-passphrase" placeholder="Passphrase">
+        <button id="btn-generate">Generate Keys</button>
+        <p id="gen-status"></p>
+    </div>
+
+    <hr>
+
+    <div id="backup-section">
+        <h3>My Key Backup</h3>
+        <button id="btn-dl-pub" class="btn-secondary" style="background-color: #34a853; color: white;">Download Public Key</button>
+        <button id="btn-dl-priv" class="btn-secondary" style="background-color: #ea4335; color: white;">Download Private Key</button>
+        <p style="font-size: 11px; color: #5f6368; margin-top: 5px; text-align: center;">Note: Your private key is safely encrypted with your passphrase.</p>
+    </div>
+
+    <hr>
+
+    <div id="import-personal-keys-section">
+        <h3>Import Existing Key Pair</h3>
+        <button id="btn-import-personal" class="btn-secondary" style="background-color: #fbbc04; color: #202124; font-weight: bold;">Import Key File (.asc)</button>
+        <input type="file" id="import-personal-picker" accept=".asc,.txt,.pgp" style="display: none;">
+        <p style="font-size: 11px; color: #5f6368; margin-top: 5px; text-align: center;">Upload an armored file containing your public and/or private key.</p>
+    </div>
+
+    <hr>
+    
+    <h3>Public Key Address Book</h3>
+    <button id="export-btn" class="btn-secondary">Export Keyring (JSON)</button>
+    <button id="import-btn" class="btn-secondary">Import Keyring (JSON)</button>
+    
+    <input type="file" id="import-file-picker" accept=".json" style="display: none;">
+    
+    <div id="status-message"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

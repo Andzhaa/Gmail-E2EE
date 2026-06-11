@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail PGP E2EE",
+  "version": "1.0",
+  "description": "End-to-End Encrypted messaging for Gmail using OpenPGP.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

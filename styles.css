@@ -1,0 +1,6 @@
+/* styles.css */
+/* Optional: Adds a slight hover effect to our injected button */
+div[data-btn-injected="true"] > div:hover {
+    background-color: #1557b0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
