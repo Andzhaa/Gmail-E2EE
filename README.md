@@ -1,5 +1,5 @@
 # Gmail-E2EE
-Extension for KFDatasec2026 lecture, Gemini AI used to assist in coding.
+Extension for KFDatasec2026 course, Gemini AI used to assist in coding.
 An End-to-End Encryption (E2EE) solution for Gmail using OpenPGP.js and Chrome Manifest V3.
 
 ## Key Features
